@@ -56,7 +56,7 @@ y_train = np_utils.to_categorical(y_train)
 y_test = np_utils.to_categorical(y_test)
 
 print(y_train)
-# 將特徵點從0~255转换成0~1提高特征提取精度
+# 將特徵點從0~255轉換成0~1提高特征提取精度
 x_train = x_train.astype('float32')
 x_test = x_test.astype('float32')
 x_train /= 255
