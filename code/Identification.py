@@ -9,21 +9,6 @@ from keras.optimizers import SGD, RMSprop, Adam
 from keras.layers import Conv2D, MaxPooling2D
 import cv2
 
-def prepicture(picname):
-    img = Image.open('./pridction/' + picname)
-    new_img = img.resize((100, 100), Image.BILINEAR)
-    new_img.save(os.path.join('./pridction/', os.path.basename(picname)))
-
-def read_image2(filename):
-    img = Image.open('./pridction/'+filename).convert('RGB')
-    return np.array(img)
-'''
-for jpgfile in os.listdir('./pridction/'):
-    prepicture(jpgfile)
-    x_test = []
-    x_test.append(read_image2(jpgfile))
-    x_test = np.array(x_test)
-'''
 webcam = cv2.VideoCapture(1)
 y=1
 def com():
