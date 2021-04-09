@@ -68,7 +68,7 @@ def com():
     sgd = SGD(lr=0.001, decay=1e-6, momentum=0.9, nesterov=True)
     model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-    model.load_weights('./weight/weight_loss0.01.hdf5')
+    model.load_weights('./weight/weight_loss0.01.hdf5')  #導入訓練模型
     classes = model.predict_classes(x_test)[0]
     '''
     if classes == 0:
