@@ -39,7 +39,7 @@ def com():
             return 1.5
         elif k == ord('+'):
             return 0.5
-    Shooting_images = read_image('test5.JPG')  #讀取圖片
+    Shooting_images = read_image('test.JPG')  #讀取圖片
     x_test = []
     x_test.clear()
     x_test.append(cv2.resize(Shooting_images, (100, 100)))
